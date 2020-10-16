@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/2001/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
@@ -101,7 +101,10 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___streams
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p><b>PVR stream demuxing</b><br  />
  Read TV streams with own demux within addon. </p>
-<p>This is only on Live TV streams and only if <a class="el" href="group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga37e512c476430c8024dabdab6e1d10ad">PVRCapabilities::SetHandlesDemuxing()</a> has been set to "true". </p>
+<p>This is only on Live TV streams and only if <a class="el" href="group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga37e512c476430c8024dabdab6e1d10ad">PVRCapabilities::SetHandlesDemuxing()</a> has been set to "true".</p>
+<hr  />
+<p><b>Stream demuxing parts in interface:</b><br  />
+ Copy this to your project and extend with your parts or leave functions complete away where not used or supported.</p>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga1fd75b1bd90c187e8102cbea6f0dbe71"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1fd75b1bd90c187e8102cbea6f0dbe71">&#9670;&nbsp;</a></span>GetStreamProperties()</h2>
@@ -163,7 +166,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___streams
 </div><div class="memdoc">
 
 <p>Read the next packet from the demultiplexer, if there is one. </p>
-<dl class="section return"><dt>Returns</dt><dd>The next packet. If there is no next packet, then the add-on should return the packet created by calling AllocateDemuxPacket(0) on the callback. If the stream changed and Kodi's player needs to be reinitialised, then, the add-on should call AllocateDemuxPacket(0) on the callback, and set the streamid to DMX_SPECIALID_STREAMCHANGE and return the value. The add-on should return <code>nullptr</code> if an error occured.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The next packet. If there is no next packet, then the add-on should return the packet created by calling AllocateDemuxPacket(0) on the callback. If the stream changed and Kodi's player needs to be reinitialised, then, the add-on should call AllocateDemuxPacket(0) on the callback, and set the streamid to DMX_SPECIALID_STREAMCHANGE and return the value. The add-on should return <code>nullptr</code> if an error occurred.</dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>Required, and only used if addon has its own demuxer. Return <code>nullptr</code> if this add-on won't provide this function. </dd></dl>
 
 </div>
